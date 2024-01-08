@@ -10,9 +10,9 @@ import {
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { FaCaretDown } from "react-icons/fa6";
+import { TbSpeakerphone } from "react-icons/tb";
 
-export function UserNav() {
+export function MarketingNav() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -20,7 +20,7 @@ export function UserNav() {
           <Avatar className="h-8 w-8">
             <AvatarImage src="/avatars/01.png" alt="@shadcn" />
             <AvatarFallback>
-              <FaCaretDown
+              <TbSpeakerphone
                 className="h-4 w-4 text-gray-600"
                 aria-hidden="true"
               />

@@ -13,6 +13,9 @@ import { PiLightningDuotone } from "react-icons/pi";
 import { TbDiscount2, TbSpeakerphone, TbTruck } from "react-icons/tb";
 import { UserNav } from "./profile-dropdown";
 import TeamSwitcher from "./account-switcher";
+import { MarketingNav } from "./marketing-dropdown";
+import { Input } from "@/components/ui/input";
+import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 
 const navigation = [
   { name: "Home", href: "#", icon: GoHome as IconType, current: false },
@@ -122,26 +125,31 @@ export default function Dashboard() {
             <HiMenuAlt2 className="h-6 w-6" aria-hidden="true" />
           </button>
           <div className="flex-1 px-4 flex justify-between">
-            <div className="flex-1 flex">
-              <form className="w-full flex md:ml-0" action="#" method="GET">
-                <label htmlFor="search-field" className="sr-only">
-                  Search
-                </label>
-                <div className="relative w-full text-gray-400 focus-within:text-gray-600">
-                  <div className="absolute inset-y-0 left-0 flex items-center pointer-events-none">
-                    <HiSearch className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <input
-                    id="search-field"
-                    className="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm"
-                    placeholder="Search"
-                    type="search"
-                    name="search"
+            <div className="ml-4 space-x-4 flex items-center md:ml-6">
+              <span className="inline-flex">Payments</span>
+              <div className="flex justify-center items-center">
+                <QuestionMarkCircledIcon className="h-5 w-5 text-gray-400 mr-1" />
+                <span className="text-xs text-gray-600">How it works</span>
+              </div>
+            </div>
+            <div className="flex h-full">
+              <form className="my-auto">
+                <label className="relative block">
+                  <span className="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <HiSearch className="h-5 w-5 text-gray-400" />
+                  </span>
+                  <Input
+                    className="h-10 w-80 rounded-lg text-gray-900 bg-white border border-slate-300 py-2 pl-10 pr-4"
+                    placeholder="Search features, tutorials, etc."
+                    type="text"
                   />
-                </div>
+                </label>
               </form>
             </div>
-            <div className="ml-4 flex items-center md:ml-6">
+
+            <div className="ml-4 space-x-4 flex items-center md:ml-6">
+              {/* Marketing dropdown */}
+              <MarketingNav />
               {/* Profile dropdown */}
               <UserNav />
             </div>
