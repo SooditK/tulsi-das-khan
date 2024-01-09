@@ -19,7 +19,7 @@ const data: Order[] = Array.from({ length: 100 }).map(() => ({
 export const Content: React.FC = () => {
   return (
     <>
-      <div className="mx-10">
+      <div className="mx-10 bg-gray-50">
         <div className="text-xl flex justify-between items-center font-semibold text-gray-700 dark:text-white">
           <span className="text-gray-600">Overview</span>
           <div className="flex items-center justify-end">

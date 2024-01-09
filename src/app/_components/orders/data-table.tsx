@@ -12,12 +12,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from "@/components/ui/pagination";
 import {
   Table,
   TableBody,
@@ -31,10 +33,6 @@ import {
   ArrowDownIcon,
   ArrowUpIcon,
   CaretSortIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
   DownloadIcon,
   EyeNoneIcon,
   MixerHorizontalIcon,
@@ -53,15 +51,6 @@ import {
   type Table as TanStackTable,
   type VisibilityState,
 } from "@tanstack/react-table";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
 import * as React from "react";
 
 interface DataTableProps<TData, TValue> {
@@ -115,7 +104,7 @@ export function DataTable<TData, TValue>({
   );
 
   return (
-    <div className="rounded-md border w-full" style={{ height: "100%" }}>
+    <div className="rounded-md border bg-white w-full">
       {showViewControls && (
         <div className="flex justify-end mb-2 p-2">
           {filterColumn && (

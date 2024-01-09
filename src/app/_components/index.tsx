@@ -17,6 +17,7 @@ import { MarketingNav } from "./marketing-dropdown";
 import { Input } from "@/components/ui/input";
 import { QuestionMarkCircledIcon } from "@radix-ui/react-icons";
 import { Content } from "./content";
+import Wallet from "./wallet";
 
 const navigation = [
   { name: "Home", href: "#", icon: GoHome as IconType, current: false },
@@ -114,6 +115,9 @@ export default function Dashboard() {
               ))}
             </nav>
           </div>
+          <div className="flex items-center h-18 flex-shrink-0 p-2 bg-dark">
+            <Wallet />
+          </div>
         </div>
       </div>
       <div className="md:pl-64 flex flex-col">
@@ -156,8 +160,7 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
-        <main className="flex-1">
+        <main className="flex-1 min-h-[calc(100vh-4rem)] overflow-y-auto focus:outline-none">
           <div className="w-full bg-slate-50 py-6 mx-auto px-4 sm:px-6 md:px-8">
             <Content />
           </div>
