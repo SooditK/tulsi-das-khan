@@ -9,7 +9,7 @@ import { DataTable } from "./orders/data-table";
 import { type Order, columns } from "./orders/columns";
 import { faker } from "@faker-js/faker";
 
-const data: Order[] = Array.from({ length: 50 }).map(() => ({
+const data: Order[] = Array.from({ length: 100 }).map(() => ({
   id: faker.number.int().toString(),
   orderDate: faker.date.recent().toLocaleDateString(),
   amount: faker.number.int({ min: 200, max: 1000 }),
